@@ -1,0 +1,49 @@
+@import './mixins';
+
+.location__container {
+  width: 100%;
+  height: 100vh;
+
+  .locationCards__container {
+    @include flex-col;
+    padding: 50px 0px 0px 0px;
+    .location__card {
+      max-width: 500px;
+      text-align: center;
+      padding: 30px 0px;
+      h1 {
+        font-size: clamp(1rem, 2rem, 4vh);
+      }
+
+      h2 {
+        font-size: clamp(0.5rem, 1.5rem, 3vh);
+        padding-top: 20px;
+      }
+
+      h3 {
+        font-size: clamp(0.5rem, 1.2rem, 2vh);
+      }
+    }
+
+    .locationHotels__card {
+      max-width: 500px;
+      padding: 30px 0px;
+      h1 {
+        text-align: center;
+        font-size: clamp(1rem, 2rem, 4vh);
+      }
+
+      ul {
+        padding-top: 20px;
+        li {
+          list-style: none;
+          font-size: clamp(0.5rem, 1.2rem, 3vh);
+          a {
+            text-decoration: underline;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

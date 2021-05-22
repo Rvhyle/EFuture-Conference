@@ -1,0 +1,99 @@
+@import './variables', './mixins';
+
+.home__container {
+  //Header
+  .header__container {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.651), rgba(21, 181, 221, 0.7)),
+      url('../assets//header-bg.jpg') no-repeat center;
+    background-size: cover;
+    padding: 12rem 0;
+
+    .header__content-padding {
+      padding: 5px 0px;
+    }
+
+    //Title
+    #header__title {
+      color: $primary;
+      font-size: clamp(2.5rem, 5vw, 7rem);
+      span {
+        color: white;
+      }
+    }
+
+    #header__subtitle {
+      color: white;
+      font-size: clamp(1.2rem, 2vw, 1.7rem);
+      padding-bottom: 30px;
+    }
+
+    .header__info {
+      color: rgb(0, 0, 0);
+      font-size: clamp(1rem, 2.7vw, 1.2rem);
+    }
+
+    #header__button {
+      color: white;
+      font-weight: 600;
+      font-size: clamp(0.7rem, 0.8vw, 1rem);
+      padding: 10px 30px;
+      margin-top: 50px;
+      background-color: rgba(37, 170, 247, 0.37);
+      border: 2px solid black;
+      cursor: pointer;
+    }
+  }
+
+  //Sponsors Section
+  .sponsor__container {
+    padding: 3rem 0px;
+    margin: 2rem 0;
+    text-align: center;
+    h1 {
+      text-transform: capitalize;
+      color: $secondary;
+      font-size: clamp(1.3rem, 2vw, 3rem);
+    }
+
+    .sponsor__companies_container {
+      @include flex-row;
+      justify-content: space-around;
+      width: 85%;
+      margin: 0 auto;
+      padding: 5rem 0px;
+      .sponsor__logo {
+        width: 250px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  //Conference Speakers Section
+  .conf__container {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(rgb(19, 204, 253), rgba(47, 228, 235, 0.815));
+
+    h1 {
+      color: $accent;
+      text-transform: capitalize;
+      font-size: clamp(2rem, 2vw, 3rem);
+    }
+
+    .conf__speakers {
+      @include flex-row;
+      justify-content: center;
+      align-items: start;
+      gap: 100px;
+      padding: 5rem 0;
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+}

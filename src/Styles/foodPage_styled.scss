@@ -1,0 +1,17 @@
+@import './mixins';
+
+.food__container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 50px 0px;
+  h1 {
+    text-align: center;
+  }
+
+  .foodOption__container {
+    @include flex-col;
+    align-items: center;
+    gap: 7rem;
+    padding: 50px 0px;
+  }
+}
